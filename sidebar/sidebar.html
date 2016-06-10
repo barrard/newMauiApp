@@ -1,0 +1,34 @@
+	<div id="header"></div>
+	<div id="sidebar"></div>
+		
+	<script src="./script/mustache.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script id='sideBar' type='mustache/x-tmlp'>
+
+	<ul>
+	{{#sideBarItems}}
+
+		<li><a href={{link}}>{{item}}</a></li>
+
+	{{/sideBarItems}}
+
+
+	</ul>
+
+</script>
+
+<script type="text/javascript">
+var data = {
+	sideBarItems : [
+	{item : 'contacts', link : './contacts'},
+	{'item' :'locations', link: './locations'},
+	{'item' : 'pictures', link : './pictures'},
+	{item : 'messages', link: './messages'},
+	{item : 'extra',    link : './extra'}
+	]
+}
+	var tmpl = document.getElementById('sideBar').innerHTML
+	var html = Mustache.to_html(tmpl, data)
+	var divv = document.getElementById('sidebar')
+	divv.innerHTML=html
+</script>

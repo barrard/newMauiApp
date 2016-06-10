@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<link rel="stylesheet" href="./styles/weather-icons.css" type="text/css" />
+		<link rel="stylesheet" href="./styles/foundation.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="./styles/css.css">
+		<link rel="stylesheet" type="text/css" href="./styles/map-icons.min.css">
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+		
+		<meta charset="UTF-8">
+		<title>Maui ReCreate</title>
+</head>
+<body>
+<div class="row callout flex">
+	<div class="columns-12">
+		<p id='userMessage'>Hello <span id='userID'></span></p>
+		<ul id= 'topNav'>
+			<li><i class="map-icon map-icon-point-of-interest"></i></li>
+			<li><i class="map-icon map-icon-point-of-interest"></i></li>
+			<li><i class="map-icon map-icon-point-of-interest"></i></li>
+			<li><i class="map-icon map-icon-point-of-interest"></i></li>
+			<li><i class="map-icon map-icon-point-of-interest"></i></li>
+		</ul>
+		<p  id = 'newuser' href="#">Click here to give yourself a username</p>
+	</div>
+</div>
+<div class="row">
+	<div class="column small-12">
+		<h3>Last Updated @<span id="timeUpdate"></span></h3>
+
+	</div>
+</div>
+<div class="row">
+	<div class="column small-2">
+		<a href="#" class="button">back</a>
+	</div>
+	<div class="column small-8">
+		<select id="selectForcastData" style="display:inline">
+			<option value="pickOne">See forcast data</option>
+			<option value="minutely">Minutely</option>
+			<option value="hourly">Hourly</option>
+			<option value="daily">Daily</option>
+		</select>
+	</div>
+	<div class="column small-2">
+		<a href="#" class="button">forward</a>
+	</div>
+
+</div>
+
+<input type="button" id="initMap" value="Map">
+<input type="button" id="addMarker" value="Add all Markers">
+<input type="button" id="removeMarker" value="Remove all Markers">
+<input type="button" id="addNewMarker" value="Add New Marker">
+<input type="button" id="removeLastMarker" value="Remove last Marker">
+<input type="button" id="myLocation" value="My Location">
+<input type="button" id="stopTracking" value="Stop Tracking">
+
+	<div class="row">
+		
+		<div class="small-12 column">
+			<div id='map'></div>
+    	</div>
+
+	</div>
+<!-- <i><span class="map-icon map-icon-point-of-interest"></span></i>
+<i><span class="map-icon map-icon-point-of-interest"></span></i>
+<i class="map-icon map-icon-point-of-interest"></i>
+<i class="wi wi-moonrise"></i> -->
+
+RESULTS
+<div id="result"></div>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAM62Hrf2p4dS8znXdv4trh62Ta6digZDw",
+    authDomain: "whereyoustay.firebaseapp.com",
+    databaseURL: "https://whereyoustay.firebaseio.com",
+    storageBucket: "project-5639834141875522991.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript" src='./script/jquery.js'></script>
+<script src="./script/foundation.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJ7LXGgSJMXsYIDS_ppZWxndjoJGOtWY&libraries=visualization" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./script/map-icons.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./sidebar.js" type="text/javascript" charset="utf-8"></script>
+<script src="./script/firebase.js" type="text/javascript" charset="utf-8"></script>
+<script src="./script/app.js" type="text/javascript" charset="utf-8"></script>
+<script src="./script/localStoreage.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

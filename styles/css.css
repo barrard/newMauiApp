@@ -1,0 +1,28 @@
+#sideBar li{
+
+}
+#userMessage{
+	font-size: 30px;
+	float: left;
+}
+
+#topNav li{
+	font-size: 30px;
+	padding: 10px;
+	padding-left: 20px;
+	display: inline;
+}
+
+      #map {
+      	border: 1px solid black;
+        height: 350px;
+      }
+
+.wi{
+	color:goldenrod;
+	font-size: 40px;
+}
+
+.labels{
+	font-size: 40px;
+}
